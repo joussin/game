@@ -17,8 +17,8 @@ class GameScene: SKScene {
         /* Setup your scene here */
         var leftArmAnimationArray = [SKTexture]()
         
-        for index in 1...5 {
-            leftArmAnimationArray.append(SKTexture(imageNamed: "fire-\(index)"))
+        for index in 1...18 {
+            leftArmAnimationArray.append(SKTexture(imageNamed: "bomb-\(index)"))
         }
         // Setup player
         leftHand = (childNodeWithName("player") as? SKSpriteNode)!
