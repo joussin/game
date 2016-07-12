@@ -11,34 +11,17 @@ import SpriteKit
 class GameScene: SKScene {
 
 
-    var leftHand : SKSpriteNode!
+    var player : Player!
     
     override func didMoveToView(view: SKView) {
-        /* Setup your scene here */
-        var leftArmAnimationArray = [SKTexture]()
         
-        for index in 1...18 {
-            leftArmAnimationArray.append(SKTexture(imageNamed: "bomb-\(index)"))
-        }
-        // Setup player
-        leftHand = (childNodeWithName("player") as? SKSpriteNode)!
-        
-        let actionMove = SKAction.moveTo(CGPoint(x: 1955, y: leftHand.position.y), duration: NSTimeInterval(88))
-
-        //leftHand.runAction(SKAction.sequence([actionMove]))
-        
-         leftHand.runAction(
-            SKAction.repeatActionForever(
-            SKAction.animateWithTextures(leftArmAnimationArray, timePerFrame: 0.1)
-                )
-        )
-        
-        
+        player = Player( spriteNode: (childNodeWithName("player") as? SKSpriteNode)!  )
+        player.walkAction()
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
        /* Called when a touch begins */
-        
+        player.bombAction()
     }
    
     override func update(currentTime: CFTimeInterval) {

@@ -76,6 +76,7 @@
 		E27F37831D2C503B00489D5E /* bomb-7.png in Resources */ = {isa = PBXBuildFile; fileRef = E27F37711D2C503B00489D5E /* bomb-7.png */; };
 		E27F37841D2C503B00489D5E /* bomb-8.png in Resources */ = {isa = PBXBuildFile; fileRef = E27F37721D2C503B00489D5E /* bomb-8.png */; };
 		E27F37851D2C503B00489D5E /* bomb-9.png in Resources */ = {isa = PBXBuildFile; fileRef = E27F37731D2C503B00489D5E /* bomb-9.png */; };
+		E27F37881D2D7BA300489D5E /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27F37871D2D7BA300489D5E /* Player.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -150,6 +151,7 @@
 		E27F37711D2C503B00489D5E /* bomb-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bomb-7.png"; sourceTree = "<group>"; };
 		E27F37721D2C503B00489D5E /* bomb-8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bomb-8.png"; sourceTree = "<group>"; };
 		E27F37731D2C503B00489D5E /* bomb-9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bomb-9.png"; sourceTree = "<group>"; };
+		E27F37871D2D7BA300489D5E /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +184,7 @@
 		E2019D1A1D25A8D8006504F3 /* metalslug */ = {
 			isa = PBXGroup;
 			children = (
+				E27F37861D2D7B9000489D5E /* Class */,
 				E2019D311D25A928006504F3 /* Sprite */,
 				E2019D1B1D25A8D8006504F3 /* AppDelegate.swift */,
 				E2019D1D1D25A8D8006504F3 /* GameScene.sks */,
@@ -198,15 +201,7 @@
 		E2019D311D25A928006504F3 /* Sprite */ = {
 			isa = PBXGroup;
 			children = (
-				E27F37611D2C503B00489D5E /* bomb */,
-				E27F37271D2C4DB800489D5E /* fire-up */,
-				E27F372D1D2C4DB800489D5E /* fly */,
-				E27F37311D2C4DB800489D5E /* hit */,
-				E27F37341D2C4DB800489D5E /* jump */,
-				E20581E11D2C362F0046B3F3 /* background */,
-				E20581AC1D2C36170046B3F3 /* fire */,
-				E20581B21D2C36170046B3F3 /* idle */,
-				E20581B71D2C36170046B3F3 /* walking */,
+				E27F37891D2D800700489D5E /* Player */,
 			);
 			name = Sprite;
 			sourceTree = "<group>";
@@ -334,6 +329,30 @@
 				E27F37731D2C503B00489D5E /* bomb-9.png */,
 			);
 			path = bomb;
+			sourceTree = "<group>";
+		};
+		E27F37861D2D7B9000489D5E /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				E27F37871D2D7BA300489D5E /* Player.swift */,
+			);
+			name = Class;
+			sourceTree = "<group>";
+		};
+		E27F37891D2D800700489D5E /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				E27F37611D2C503B00489D5E /* bomb */,
+				E27F37271D2C4DB800489D5E /* fire-up */,
+				E27F372D1D2C4DB800489D5E /* fly */,
+				E27F37311D2C4DB800489D5E /* hit */,
+				E27F37341D2C4DB800489D5E /* jump */,
+				E20581E11D2C362F0046B3F3 /* background */,
+				E20581AC1D2C36170046B3F3 /* fire */,
+				E20581B21D2C36170046B3F3 /* idle */,
+				E20581B71D2C36170046B3F3 /* walking */,
+			);
+			name = Player;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -470,6 +489,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E27F37881D2D7BA300489D5E /* Player.swift in Sources */,
 				E2019D201D25A8D8006504F3 /* GameScene.swift in Sources */,
 				E2019D221D25A8D8006504F3 /* GameViewController.swift in Sources */,
 				E2019D1C1D25A8D8006504F3 /* AppDelegate.swift in Sources */,
